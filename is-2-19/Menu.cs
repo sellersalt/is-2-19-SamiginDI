@@ -33,5 +33,11 @@ namespace is_2_19
             Form2 From2 = new Form2();
             From2.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Z3 From3 = new Z3();
+            From3.ShowDialog();
+        }
     }
 }
