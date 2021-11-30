@@ -25,7 +25,7 @@ namespace is_2_19
                 Year = year;
                 Articul = articul;
             }
-            public abstract void Display();
+            public abstract void Display(ListBox listBox1);
             
                 
             
@@ -45,9 +45,9 @@ namespace is_2_19
 
             
 
-            public override void Display()
+            public override void Display(ListBox listBox1)
             {
-                MessageBox.Show($"Частота = {Chastota}, Количество ядер = {KolYder}, Количество потоков {KolPoto}");
+               listBox1.Items.Add($"Частота = {Chastota}, Количество ядер = {KolYder}, Количество потоков {KolPoto}");
             } 
            
         }
@@ -64,10 +64,13 @@ namespace is_2_19
                 Obeim = obeim;
             }
 
-            public override void Display()
+            public override void Display(ListBox listBox1)
             {
-                base.Display();
-                MessageBox.Show($"Цена данного предмета{Tsena}, год выпуска {Year}, Частота = {Chastota}, Количество ядер = {KolYder}, Количество потоков {KolPoto}, Частота видеокарты{ChastotaGPU}, Производитель{Proizv}, Объем памяти{Obeim}, артикул {Articul}");
+                
+                listBox1.Items.Add($"Цена данного предмета - {Tsena}, год выпуска - {Year}");
+                listBox1.Items.Add($"Частота = {Chastota}, Количество ядер = {KolYder}");
+                listBox1.Items.Add($" Количество потоков = {KolPoto}, Частота видеокарты = {ChastotaGPU}");
+                listBox1.Items.Add($"Производитель = {Proizv}, Объем памяти = {Obeim}, Артикул = {Articul}");
             }
         }
         public Form1()
@@ -83,8 +86,8 @@ namespace is_2_19
         private void button1_Click(object sender, EventArgs e)
         {
             GPU<string> gpu = new GPU<string>(Convert.ToDouble(textBox6.Text), textBox7.Text, Convert.ToDouble(textBox8.Text), Convert.ToDouble(textBox3.Text), Convert.ToDouble(textBox4.Text), Convert.ToDouble(textBox5.Text), Convert.ToDouble(textBox1.Text), textBox2.Text, textBox9.Text);
-            gpu.Display();
-            listBox1.Items.Add("dsfsdfds" + Convert.ToDouble(textBox6.Text) + textBox7.Text + Convert.ToDouble(textBox8.Text) + Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox4.Text) + Convert.ToDouble(textBox5.Text) + Convert.ToDouble(textBox1.Text) + textBox2.Text + textBox9.Text );
+            gpu.Display(listBox1);
+            
         }
     }
 }

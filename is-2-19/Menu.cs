@@ -27,5 +27,11 @@ namespace is_2_19
             Form1 From1 = new Form1();
             From1.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 From2 = new Form2();
+            From2.ShowDialog();
+        }
     }
 }
