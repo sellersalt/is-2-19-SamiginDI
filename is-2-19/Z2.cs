@@ -33,7 +33,7 @@ namespace is_2_19
             return connStr;
             }
         }
-        MySqlConnection conn new MySqlConnection(Pod.DV());
+        MySqlConnection conn = new MySqlConnection(Pod.DV());
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -45,7 +45,7 @@ namespace is_2_19
 
             try
             {
-                conn = Open();
+                conn.Open();
                 MessageBox.Show("Dobro");
             }
             catch
