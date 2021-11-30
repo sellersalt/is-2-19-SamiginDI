@@ -82,9 +82,9 @@ namespace is_2_19
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GPU<string> gpu = new GPU<string>(11, "11", 11, 11, 11, 11, 11, "11", "11");
+            GPU<string> gpu = new GPU<string>(Convert.ToDouble(textBox6.Text), textBox7.Text, Convert.ToDouble(textBox8.Text), Convert.ToDouble(textBox3.Text), Convert.ToDouble(textBox4.Text), Convert.ToDouble(textBox5.Text), Convert.ToDouble(textBox1.Text), textBox2.Text, textBox9.Text);
             gpu.Display();
-            listBox1.Items.Add(Convert.ToDouble(textBox6.Text)+ textBox7.Text + Convert.ToDouble(textBox8.Text) + Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox4.Text) + Convert.ToDouble(textBox5.Text) + Convert.ToDouble(textBox1.Text) + textBox2.Text + textBox9.Text );
+            listBox1.Items.Add("dsfsdfds" + Convert.ToDouble(textBox6.Text) + textBox7.Text + Convert.ToDouble(textBox8.Text) + Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox4.Text) + Convert.ToDouble(textBox5.Text) + Convert.ToDouble(textBox1.Text) + textBox2.Text + textBox9.Text );
         }
     }
 }
