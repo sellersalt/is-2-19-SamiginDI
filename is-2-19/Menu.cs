@@ -25,7 +25,7 @@ namespace is_2_19
                 Year = year;
                 Articul = articul;
             }
-            public abstract void Info();
+            public abstract void Display();
             
                 
             
@@ -43,12 +43,9 @@ namespace is_2_19
                 KolPoto = kolpoto;
             }
 
-            public override void Info()
-            {
-                
-            }
+            
 
-            public virtual void Display()
+            public override void Display()
             {
                 MessageBox.Show($"Частота = {Chastota}, Количество ядер = {KolYder}, Количество потоков {KolPoto}");
             } 
@@ -70,7 +67,7 @@ namespace is_2_19
             public override void Display()
             {
                 base.Display();
-                MessageBox.Show($"Цена данного предмета{Tsena}, год выпуска {Year}, Частота = {Chastota}, Количество ядер = {KolYder}, Количество потоков {KolPoto}, Частота видеокарты{ChastotaGPU}, Производитель{Proizv}, Объем памяти{Obeim}");
+                MessageBox.Show($"Цена данного предмета{Tsena}, год выпуска {Year}, Частота = {Chastota}, Количество ядер = {KolYder}, Количество потоков {KolPoto}, Частота видеокарты{ChastotaGPU}, Производитель{Proizv}, Объем памяти{Obeim}, артикул {Articul}");
             }
         }
         public Form1()
@@ -85,7 +82,9 @@ namespace is_2_19
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            GPU<string> gpu = new GPU<string>(11, "11", 11, 11, 11, 11, 11, "11", "11");
+            gpu.Display();
+            listBox1.Items.Add(Convert.ToDouble(textBox6.Text)+ textBox7.Text + Convert.ToDouble(textBox8.Text) + Convert.ToDouble(textBox3.Text) + Convert.ToDouble(textBox4.Text) + Convert.ToDouble(textBox5.Text) + Convert.ToDouble(textBox1.Text) + textBox2.Text + textBox9.Text );
         }
     }
 }
