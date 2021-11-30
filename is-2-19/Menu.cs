@@ -54,7 +54,7 @@ namespace is_2_19
             } 
            
         }
-        class GPU : CPU
+        class GPU<T> : CPU<T>
         {
             public double ChastotaGPU { get; set; }
             public string Proizv { get; set; }
