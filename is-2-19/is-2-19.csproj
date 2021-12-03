@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\Downloads\v4.5.2\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>F:\l\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -75,6 +75,18 @@
     <Compile Include="Z3.Designer.cs">
       <DependentUpon>Z3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Z4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Z4.Designer.cs">
+      <DependentUpon>Z4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Z5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Z5.Designer.cs">
+      <DependentUpon>Z5.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +107,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Z3.resx">
       <DependentUpon>Z3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Z4.resx">
+      <DependentUpon>Z4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Z5.resx">
+      <DependentUpon>Z5.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

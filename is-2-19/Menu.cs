@@ -39,5 +39,17 @@ namespace is_2_19
             Z3 From3 = new Z3();
             From3.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Z4 From4 = new Z4();
+            From4.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Z5 From5 = new Z5();
+            From5.ShowDialog();
+        }
     }
 }
