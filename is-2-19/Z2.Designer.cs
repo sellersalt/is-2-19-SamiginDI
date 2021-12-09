@@ -34,7 +34,7 @@ namespace is_2_19
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(75, 98);
+            this.button1.Location = new System.Drawing.Point(73, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;

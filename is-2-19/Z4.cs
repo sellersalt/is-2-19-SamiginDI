@@ -27,13 +27,13 @@ namespace is_2_19
 
                 dataGridView1.CurrentRow.Selected = true;
 
-                string index_rows5;
+                string id_rows5;
 
-                index_rows5 = dataGridView1.SelectedCells[0].RowIndex.ToString();
+                id_rows5 = dataGridView1.SelectedCells[0].RowIndex.ToString();
 
-                id_rows5 = dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[2].Value.ToString();
+                id_rows5 = dataGridView1.Rows[Convert.ToInt32(id_rows5)].Cells[2].Value.ToString();
                 DateTime todays_date = DateTime.Today;
-                DateTime Date_of_Birth = Convert.ToDateTime(dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[2].Value.ToString());
+                DateTime Date_of_Birth = Convert.ToDateTime(dataGridView1.Rows[Convert.ToInt32(id_rows5)].Cells[2].Value.ToString());
                 string result = (todays_date - Date_of_Birth).ToString(); //Тут хранится значение, которое соотвутствует прошедшим дням
                 MessageBox.Show("Со дня рождения прошло " + result.Substring(0, result.Length - 9) + " дней"); //Тут это значение приводится в презентабельный вид и выводится пользователю
             }

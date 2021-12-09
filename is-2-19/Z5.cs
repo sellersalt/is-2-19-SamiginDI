@@ -70,5 +70,10 @@ namespace is_2_19
                 Insert(fiostud, registration_date);
             }
         }
+
+        private void Z5_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

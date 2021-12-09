@@ -59,6 +59,7 @@ namespace is_2_19
             this.Controls.Add(this.textBox1);
             this.Name = "Z5";
             this.Text = "Z5";
+            this.Load += new System.EventHandler(this.Z5_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
