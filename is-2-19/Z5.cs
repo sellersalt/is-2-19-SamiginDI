@@ -18,7 +18,7 @@ namespace is_2_19
             InitializeComponent();
         }
         MySqlConnection conn = new MySqlConnection(Pod.DV());
-        public bool Insert(string fiostud)
+        public bool Insert(string fio, string reg)
         {
             //определяем переменную, хранящую количество вставленных строк
             int InsertCount = 0;
@@ -28,7 +28,7 @@ namespace is_2_19
             conn.Open();
             // запросы
             // запрос вставки данных
-            string query = $"INSERT INTO t_PraktStud (fioStud, datetimeStud) VALUES ('{fiostud}')";
+            string query = $"INSERT INTO t_PraktStud (fioStud, datetimeStud) VALUES ('{fio}', '{reg}')";
             try
             {
                 // объект для выполнения SQL-запроса
@@ -59,8 +59,16 @@ namespace is_2_19
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string fiostud = textBox1.Text;
-           
+            string fio = textBox1.Text;
+            string reg = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            if (textBox1.Text.Equals(""))
+            {
+                MessageBox.Show("Вы не ввели все необходимые данные!");
+            }
+            else
+            {
+                Insert(fio, reg);
+            }
         }
 
         private void Z5_Load(object sender, EventArgs e)
